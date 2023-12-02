@@ -12,8 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup C++ environment
-      run: sudo apt-get install -y g++
     - name: Build with g++
       run: |
-        /usr/bin/g++ -I ${{ github.workspace }}/include ${{ github.workspace }}/**/*.cpp -fdiagnostics-color=always -g -o ${{ github.workspace }}/${{ github.event.pull_request.head.ref }}
+        /usr/bin/g++ -I ${{ github.workspace }}/**/*.cpp -fdiagnostics-color=always -g -o ${{ github.workspace }}/${{ github.event.pull_request.head.ref }}
