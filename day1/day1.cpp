@@ -50,8 +50,8 @@ void part1(std::vector<std::string> lines) {
     numbers.push_back(res);
   }
 
-  std::cout << "Day1.1: " << std::accumulate(numbers.begin(), numbers.end(), 0)
-            << std::endl;
+  std::cout << "❄️ Day1.1: "
+            << std::accumulate(numbers.begin(), numbers.end(), 0) << std::endl;
 }
 
 void part2(std::vector<std::string> lines) {
@@ -79,8 +79,8 @@ void part2(std::vector<std::string> lines) {
     results.push_back(res);
   }
 
-  std::cout << "Day1.2: " << std::accumulate(results.begin(), results.end(), 0)
-            << std::endl;
+  std::cout << "❄️ Day1.2: "
+            << std::accumulate(results.begin(), results.end(), 0) << std::endl;
 }
 
 void day1() {
@@ -92,5 +92,5 @@ void day1() {
   auto end = std::chrono::high_resolution_clock::now();
 
   std::chrono::duration<double, std::milli> elapsed = end - start;
-  std::cout << "Day1 runtime: " << elapsed.count() << "ms" << std::endl;
+  std::cout << "❄️ Day1 runtime: " << elapsed.count() << "ms" << std::endl;
 }

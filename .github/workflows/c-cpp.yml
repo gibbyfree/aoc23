@@ -15,3 +15,6 @@ jobs:
     - name: Build with g++
       run: |
         /usr/bin/g++ -I ${{ github.workspace }}/include ${{ github.workspace }}/**/*.cpp -fdiagnostics-color=always -g
+    - name: Run with g++
+      run: |
+        ./a.out

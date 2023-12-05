@@ -87,9 +87,9 @@ void part1And2(std::vector<std::string> lines) {
     powers.push_back(std::get<1>(result));
   }
 
-  std::cout << "Day2.1: " << std::accumulate(ids.begin(), ids.end(), 0)
+  std::cout << "🎁 Day2.1: " << std::accumulate(ids.begin(), ids.end(), 0)
             << std::endl;
-  std::cout << "Day2.2: " << std::accumulate(powers.begin(), powers.end(), 0)
+  std::cout << "🎁 Day2.2: " << std::accumulate(powers.begin(), powers.end(), 0)
             << std::endl;
 }
 
@@ -101,5 +101,5 @@ void day2() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double, std::milli> elapsed = end - start;
-  std::cout << "Day2 runtime: " << elapsed.count() << "ms" << std::endl;
+  std::cout << "🎁 Day2 runtime: " << elapsed.count() << "ms" << std::endl;
 }
