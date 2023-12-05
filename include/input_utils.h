@@ -5,5 +5,6 @@
 #include <vector>
 
 std::vector<std::string> readInputToLines(const std::string& fileName);
+std::vector<std::vector<char>> readInputToGrid(const std::string& fileName);
 
 #endif
