@@ -131,8 +131,12 @@ void part1(std::vector<std::vector<char>> grid) {
             << std::endl;
 }
 
-void day3() {
-  std::vector<std::vector<char>> grid = readInputToGrid("../input/3.txt");
+void day3(bool useExample) {
+  std::string path = "../input/3.txt";
+  if (useExample) {
+    path = "../input/3example.txt";
+  }
+  std::vector<std::vector<char>> grid = readInputToGrid(path);
 
   auto start = std::chrono::high_resolution_clock::now();
   part1(grid);

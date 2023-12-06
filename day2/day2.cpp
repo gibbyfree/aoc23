@@ -87,14 +87,18 @@ void part1And2(std::vector<std::string> lines) {
     powers.push_back(std::get<1>(result));
   }
 
-  std::cout << "🎁 Day2.1: " << std::accumulate(ids.begin(), ids.end(), 0)
+  std::cout << "🎁 Day 2.1: " << std::accumulate(ids.begin(), ids.end(), 0)
             << std::endl;
-  std::cout << "🎁 Day2.2: " << std::accumulate(powers.begin(), powers.end(), 0)
+  std::cout << "🎁 Day 2.2: " << std::accumulate(powers.begin(), powers.end(), 0)
             << std::endl;
 }
 
-void day2() {
-  std::vector<std::string> lines = readInputToLines("../input/2.txt");
+void day2(bool useExample) {
+  std::string path = "../input/2.txt";
+  if (useExample) {
+    path = "../input/2example.txt";
+  }
+  std::vector<std::string> lines = readInputToLines(path);
   auto start = std::chrono::high_resolution_clock::now();
 
   part1And2(lines);

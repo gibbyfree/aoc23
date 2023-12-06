@@ -4,6 +4,6 @@
 #include <string>
 #include <vector>
 
-void day3();
+void day3(bool useExample);
 
 #endif

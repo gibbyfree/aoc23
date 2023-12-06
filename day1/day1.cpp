@@ -50,7 +50,7 @@ void part1(std::vector<std::string> lines) {
     numbers.push_back(res);
   }
 
-  std::cout << "❄️ Day1.1: "
+  std::cout << "❄️ Day 1.1: "
             << std::accumulate(numbers.begin(), numbers.end(), 0) << std::endl;
 }
 
@@ -79,12 +79,16 @@ void part2(std::vector<std::string> lines) {
     results.push_back(res);
   }
 
-  std::cout << "❄️ Day1.2: "
+  std::cout << "❄️ Day 1.2: "
             << std::accumulate(results.begin(), results.end(), 0) << std::endl;
 }
 
-void day1() {
-  std::vector<std::string> lines = readInputToLines("../input/1.txt");
+void day1(bool useExample) {
+  std::string path = "../input/1.txt";
+  if (useExample) {
+    path = "../input/1example.txt";
+  }
+  std::vector<std::string> lines = readInputToLines(path);
 
   auto start = std::chrono::high_resolution_clock::now();
   part1(lines);

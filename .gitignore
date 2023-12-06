@@ -7,5 +7,6 @@
 *.out
 *.app
 
-# Not going to check-in my test input, since it's discouraged by AoC organizers.
-input/
+# Not going to check-in my non-example test input, since it's discouraged by AoC organizers.
+input/*
+!input/*example.txt

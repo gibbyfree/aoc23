@@ -1,6 +1,7 @@
 #include "input_utils.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 std::vector<std::string> readInputToLines(const std::string& fileName) {
   std::vector<std::string> lines;
@@ -40,4 +41,17 @@ std::vector<std::vector<char>> readInputToGrid(const std::string& fileName) {
   }
 
   return grid;
+}
+
+std::vector<int> splitNumberString(const std::string& numberString,
+                                   const char& delimiter) {
+  std::vector<int> numbers;
+  std::stringstream ss(numberString);
+  std::string number;
+
+  while (std::getline(ss >> std::ws, number, delimiter)) {
+    numbers.push_back(std::stoi(number));
+  }
+
+  return numbers;
 }
